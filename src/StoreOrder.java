@@ -11,7 +11,6 @@ class Order {
         this.customerName = customerName;
     }
 
-    // Статический вложенный класс
     public static class OrderItem {
         private final String productName;
         private final double unitPrice;
@@ -45,8 +44,6 @@ record OrderSummary(String orderNumber, String customerName, double totalAmount)
 public class StoreOrder {
     public static void main(String[] args) {
         Order order = new Order("ORD-100", "Anna Kowalska");
-
-        // Синтаксис создания статического вложенного класса
         order.addItem(new Order.OrderItem("Keyboard", 249.99, 1));
         order.addItem(new Order.OrderItem("Mouse", 99.99, 2));
 
