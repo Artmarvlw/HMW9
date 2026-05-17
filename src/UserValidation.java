@@ -8,7 +8,7 @@ record UserForm(String email, String password, int age) {
             throw new IllegalArgumentException("Email and password cannot be blank!");
         }
     }
-}пше
+}
 
 class UserValidator {
     private final List<Predicate<UserForm>> rules = new ArrayList<>();
